@@ -1,0 +1,15 @@
+C:\Users\iarda\source\repos\AppDeneme\bin\Debug\AppDeneme.exe.config
+C:\Users\iarda\source\repos\AppDeneme\bin\Debug\AppDeneme.exe
+C:\Users\iarda\source\repos\AppDeneme\bin\Debug\AppDeneme.pdb
+C:\Users\iarda\source\repos\AppDeneme\obj\Debug\AppDeneme.csprojAssemblyReference.cache
+C:\Users\iarda\source\repos\AppDeneme\obj\Debug\MainWindow.g.cs
+C:\Users\iarda\source\repos\AppDeneme\obj\Debug\App.g.cs
+C:\Users\iarda\source\repos\AppDeneme\obj\Debug\AppDeneme_MarkupCompile.cache
+C:\Users\iarda\source\repos\AppDeneme\obj\Debug\AppDeneme_MarkupCompile.lref
+C:\Users\iarda\source\repos\AppDeneme\obj\Debug\MainWindow.baml
+C:\Users\iarda\source\repos\AppDeneme\obj\Debug\AppDeneme.g.resources
+C:\Users\iarda\source\repos\AppDeneme\obj\Debug\AppDeneme.Properties.Resources.resources
+C:\Users\iarda\source\repos\AppDeneme\obj\Debug\AppDeneme.csproj.GenerateResource.cache
+C:\Users\iarda\source\repos\AppDeneme\obj\Debug\AppDeneme.csproj.CoreCompileInputs.cache
+C:\Users\iarda\source\repos\AppDeneme\obj\Debug\AppDeneme.exe
+C:\Users\iarda\source\repos\AppDeneme\obj\Debug\AppDeneme.pdb

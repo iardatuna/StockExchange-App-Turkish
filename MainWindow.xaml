@@ -1,0 +1,77 @@
+﻿<Window x:Class="AppDeneme.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppDeneme"
+        mc:Ignorable="d"
+        Title="Tuna Borsa" Height="450" Width="850">
+    <Grid Background="#FF858585">
+        <GroupBox x:Name="GBInputs" HorizontalAlignment="Left" Height="184" Margin="108,227,0,0" VerticalAlignment="Top" Width="488" Header="Degerler" FontFamily="Tahoma">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="109*"/>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="99*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="TextBoxKagitAdi"  HorizontalAlignment="Left" Height="22" Margin="117,10,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="85" TextChanged="TextBoxAlisBirimFiyati_TextChanged"/>
+                <Label x:Name="lblKagitAdi" Content="Kagit Adi: " HorizontalAlignment="Left"  Height="33" Margin="10,10,0,0" VerticalAlignment="Top" Width="102"/>
+                <TextBox x:Name="TextBoxAlisBirimFiyati" HorizontalAlignment="Left" Height="22" Margin="117,53,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="85" TextChanged="TextBoxAlisBirimFiyati_TextChanged"/>
+                <Label x:Name="lblAlisBirimFiyati" Content="Alis Birim Fiyati:" HorizontalAlignment="Left"  Height="33" Margin="10,53,0,0" VerticalAlignment="Top" Width="102"/>
+                <TextBox x:Name="TextBoxIstenilenYuzde" HorizontalAlignment="Left" Height="22" Margin="117,98,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="85" TextChanged="TextBoxIstenilenYuzde_TextChanged"/>
+                <TextBox x:Name="TextBoxSatisBirimFiyati" HorizontalAlignment="Left" Height="22" Margin="87,21,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="85" TextChanged="TextBoxSatisBirimFiyati_TextChanged" Grid.Column="2"/>
+                <TextBox x:Name="TextBoxLotSayisi" HorizontalAlignment="Left" Height="22" Margin="87,98,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="85" TextChanged="TextBoxLotSayisi_TextChanged" Grid.Column="2"/>
+                <Button x:Name="SubmitButton" Content="Giris" HorizontalAlignment="Left" Margin="206,129,0,3.6" Width="85" Click="SubmitButton_Click" RenderTransformOrigin="0.529,-0.517" Grid.ColumnSpan="3"/>
+                <Label x:Name="lblSatisBirimFiyati" Content="Satis Birim Fiyati:" HorizontalAlignment="Left" Height="36" Margin="40,21,0,0" VerticalAlignment="Top" Width="102" Grid.ColumnSpan="2" Grid.Column="1"/>
+                <Label x:Name="lblIstenilenYuzde" Content="Istenilen Yuzde:" HorizontalAlignment="Left" Height="22" Margin="10,98,0,0" VerticalAlignment="Top" Width="102"/>
+                <Label x:Name="lblLotSayisi" Content="Lot Sayisi:" HorizontalAlignment="Left" Height="31" Margin="1,98,0,0" VerticalAlignment="Top" Width="102" Grid.Column="2"/>
+                
+            </Grid>
+
+        </GroupBox>
+        <GroupBox x:Name="GBOutputs" Header="Kumulatif Analiz" HorizontalAlignment="Left" Height="155" Margin="10,10,0,0" VerticalAlignment="Top" Width="642" FontFamily="Tahoma">
+            <Grid>
+                <TextBox x:Name="TextBoxToplamKarZarar" HorizontalAlignment="Left" Height="21" Margin="542,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" IsReadOnly="True"/>
+                <TextBox x:Name="TextBoxYuzdeselKarZarar" HorizontalAlignment="Left" Height="21" Margin="543,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" IsReadOnly="True"/>
+                <TextBox x:Name="TextBoxMinSatisZiraat" HorizontalAlignment="Left" Height="21" Margin="129,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" IsReadOnly="True"/>
+                <TextBox x:Name="TextBoxMinSatisGaranti" HorizontalAlignment="Left" Height="21" Margin="129,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" RenderTransformOrigin="0.494,1.857" IsReadOnly="True"/>
+                <TextBox x:Name="TextBoxIstenenYuzdeIcinSatisFiyatiZiraat" HorizontalAlignment="Left" Height="21" Margin="358,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" RenderTransformOrigin="0.377,0.524" IsReadOnly="True"/>
+                <TextBox x:Name="TextBoxIstenenYuzdeIcinSatisFiyatiGaranti" HorizontalAlignment="Left" Height="21" Margin="358,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" IsReadOnly="True"/>
+                <GridSplitter HorizontalAlignment="Left" Height="6" Margin="0,61,-0.2,0" VerticalAlignment="Top" Width="629"/>
+                <Label x:Name="lblMinSatisBirimFiyatZiraat" Content="Minimum Birim &#xD;&#xA;Satis Fiyati(Ziraat)" HorizontalAlignment="Left" Height="39" Margin="10,7,0,0" VerticalAlignment="Top" Width="114"/>
+                <Label x:Name="lblMinSatisBirimFiyatZiraat_Copy" Content="Minimum Birim &#xA;Satis Fiyati(Garanti)" HorizontalAlignment="Left" Height="39" Margin="10,81,0,0" VerticalAlignment="Top" Width="114"/>
+                <Label x:Name="lblIstenenYuzdeIcinSatisZiraat" Content="Istenen Yuzde Icin &#xD;&#xA;Birim Satis Fiyati (Ziraat)" HorizontalAlignment="Left" Height="40" Margin="211,10,0,0" VerticalAlignment="Top" Width="142"/>
+                <Label x:Name="lblIstenenYuzdeIcinSatisGaranti" Content="Istenen Yuzde Icin &#xD;&#xA;Birim Satis Fiyati (Garanti)" HorizontalAlignment="Left" Height="42" Margin="211,81,0,0" VerticalAlignment="Top" Width="165"/>
+                <Label x:Name="lblIstenenYuzdeIcinSatisZiraat_Copy" Content="Toplam Kar/Zarar" HorizontalAlignment="Left" Height="40" Margin="435,16,0,0" VerticalAlignment="Top" Width="142"/>
+                <Label x:Name="lblIstenenYuzdeIcinSatisZiraat_Copy1" Content="Yuzdesel Kar/Zarar" HorizontalAlignment="Left" Height="40" Margin="435,93,0,-0.2" VerticalAlignment="Top" Width="142"/>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="GBKagitLiveData" Header="Canli Data" HorizontalAlignment="Left" Height="57" Margin="257,170,0,0" VerticalAlignment="Top" Width="166" FontFamily="Tahoma"/>
+        <DataGrid x:Name="DGWYuzdeSatisBirim" HorizontalAlignment="Left" HeadersVisibility="Column" Height="216" Margin="672,17,0,0" VerticalAlignment="Top" Width="161" SelectionChanged="DGWYuzdeSatisBirim_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Yuzde" Width="80.5" HeaderStyle="{DynamicResource CenterGridHeaderStyle}"  Binding="{Binding  Yuzde}">
+                    <DataGridTextColumn.CellStyle>
+                        <Style TargetType="DataGridCell">
+                            <Setter Property="Margin" Value="0,0,-1,0"></Setter>
+                        </Style>
+                    </DataGridTextColumn.CellStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Birim Fiyat" Width="*" Binding="{Binding  SatisBirimFiyat}">
+                    <DataGridTextColumn.CellStyle>
+                        <Style TargetType="DataGridCell">
+                            <Setter Property="Margin" Value="0,0,-1,0"></Setter>
+                        </Style>
+                    </DataGridTextColumn.CellStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+
+    <Window.Resources>
+        <Style x:Key="CenterGridHeaderStyle" TargetType="DataGridColumnHeader">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+</Window>
